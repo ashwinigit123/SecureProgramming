@@ -1,0 +1,560 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.star{
+    color: red;
+}
+
+
+
+.main {
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: fixed;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	height:auto;
+	width:80%;
+	padding: 10px;
+	text-align: center;
+  padding-bottom: 40px;
+
+
+}
+
+.register {
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: fixed;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	height:80%;
+	width:80%;
+	padding: 10px;
+	text-align: center;
+	Overflow-x:scroll;
+
+}
+.submitbtn{
+  margin: 10px;
+}
+.contact_submit
+{
+  margin: 10px;
+  left: 10%;
+  align:center;
+  padding: 10px 10px;
+  width: auto%;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer;
+  background-color: #7D0552;
+  color: black;
+  border: 2px solid #555555;
+
+}
+@media only screen and (max-width: 768px) {
+  .main {
+  top:30%;
+  height:auto;
+  }
+
+}
+  @media only screen and (max-width: 450px) {
+	  .main {
+		top:40%;
+		height:auto;
+	  }
+
+	}
+
+
+.logo {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  height: auto;
+  text-align: center;
+}
+h1 {
+	line-height: 200%;
+	margin: 0px;
+	padding: 0px 10px;
+	color: white;
+}
+#loginform,#registerform {
+	width: auto;
+	border-spacing: 0px;
+	text-align: left;
+	position : relative;
+	left: 35%;
+
+}
+#contactform {
+	width: 10%;
+	border-spacing: 0px;
+	text-align: left;
+	position : relative;
+	left: 15%;
+
+}
+@media only screen and (max-width: 768px) {
+  #contactform {
+    left:-45%;
+    }
+}
+@media only screen and (max-width: 450px) {
+  #contactform {
+    left:0%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #loginform {
+    left:30%;
+    }
+}
+@media only screen and (max-width: 450px) {
+  #loginform {
+    left:0%;
+    }
+}
+@media only screen and (max-width: 768px) {
+  #registerform {
+    left:30%;
+    }
+}
+@media only screen and (max-width: 450px) {
+  #registerform {
+    left:0%;
+    }
+}
+
+.sidenav {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  padding-top: 45px;
+  margin-top: 40px;
+}
+
+.sidenav a {
+  margin-top: 20px;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #7D0552;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .style-table {
+    width:100%;
+  }
+}
+
+div.top_div {
+  padding-left: 180px;
+  padding: 12px;
+  width: 100%;
+  background-color: #000;
+  height: 40px;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: right;
+  position: fixed;
+}
+div.top_div_icon{
+  padding: 0px 10px 10px;
+  font-size:18px;
+  float: right;
+
+}
+.logout_btn{
+  opacity: 0.9;
+}
+div.top_div_name{
+  padding-right: 180px;
+  padding: 15px;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: left;
+  position: fixed;
+}
+#content-area
+{
+  margin-left: 170px;
+  padding: 15px;
+  padding-top:40px;
+  font-size: 20px;
+  color: #000000;
+
+}
+
+div.heading h2{
+  color: #7D0552;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+div.sidenav_heading{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  max-height: 60px;
+   max-width: 100%;
+  border-bottom: 2px solid white;
+    }
+
+div.sidenav_heading h2{
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+div.cards .card {
+    background: #DCDCDC;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+  }
+.col-md-4{
+ width: 320px;
+  height:150px;
+  padding:20px 15px;
+  display: inline-block;
+  border-bottom: 1px solid grey;
+}
+.card-name{
+  color:#7D0552;
+  display:inline;
+  padding-left: 20px;
+  font-size: 17px;
+  word-break:break-all;
+
+}
+.card-data
+{
+  color:#000;
+  display:block;
+  align-self: center;
+  padding:20px 20px;
+  padding-left: 100px;
+  font-size: 15px;
+  color:#7D0552;
+}
+.card-icon{
+  color:#7D0552;
+  padding: 0px 0px 0px 0px;
+  font-size:40px;
+  float: left;
+}
+.style-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 14px;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+
+}
+.style-table thead tr {
+    background-color: #7D0552;
+    color: #ffffff;
+    text-align: left;
+
+}
+.style-table th,
+.style-table td {
+    padding: 6px 7px;
+    text-align: center;
+}
+.style-table tbody tr {
+    border-bottom: 1px solid #7D0552;
+}
+
+.style-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.style-table tbody tr:last-of-type {
+    border-bottom: 2px solid #7D0552;
+}
+
+/*Chat Window*/
+.open-button {
+  background-color: #7D0552;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 60px;
+  right: 28px;
+  width: 100px;
+}
+
+.chat-popup {
+
+  display: none;
+  position: fixed;
+  bottom: 5;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 250px;
+  max-height: 500px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #fff;
+  color: black;
+  padding: 16px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  width: 90%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: white;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+  background-color: #7D0552
+
+}
+footer {
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  background-color: #DCDCDC;
+  color: white;
+  height: 45px;
+  font-size: 13px;
+  position:fixed;
+    bottom:0;
+    width:100%;
+
+
+}
+.btn{
+  padding: 10px 10px;
+  width: auto%;
+  margin-left: 20px;
+  margin-top: 10px;
+  color: black;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+.btn:hover {background-color: #e7e7e7}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+a .btn{
+  display: block;
+   height: 15px;
+   width: 15px;
+   border: 1px solid #000;
+   margin-bottom: 5px;
+}
+ul
+{
+
+padding: 10px;
+margin: 10px;
+text-align: left;
+}
+
+/**contact me**/
+div.settings {
+display:grid;
+grid-template-columns: max-content max-content;
+grid-gap:5px;
+margin-left: 300px;
+}
+@media screen and (max-width: 450px) {
+  div.settings,div.settings label,.dropdown {
+
+    margin-left: 0;
+  }
+}
+div.settings.row.col-25 label       {text-align:left; max-width: 450px; height:30px;}
+div.settings label:after { content: ":"; }
+
+
+div.maintenance{
+  margin-top: 20px;
+  border-color: #7D0552;
+  border-style: solid;
+  background: #DCDCDC;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+@media only screen and (max-width: 768px) {
+  .maintenance {
+  top:30%;
+  height:auto;
+  }
+
+}
+
+/*add update delete*/
+.btn-group button {
+  background-color: #7D0552; /* purple background */
+  border: 1px solid #7D0552; /* purple border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  margin-top: 10px;
+  margin-left:200px;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+///***////
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/*input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}*/
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75,.row_c, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

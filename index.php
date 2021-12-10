@@ -1,3 +1,46 @@
+<?php
+
+	// Create connection
+    require_once("connect_to_db.php");
+	if ($_POST) {
+        $uname = $_POST['uname'];
+        $password = $_POST['pwd'];
+        
+        $query2 = "select * from Users WHERE Uname='".$uname."'";
+        $result = mysqli_query($conn, $query2) or die('error getting data');
+        if($result->num_rows >0)
+        {
+           while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                if($row['status']==0){
+                    echo '<script>alert("Your profile Needs activation from admin!! Please try again later")</script>';
+                }
+                else{
+                    $pass = $row['Password'];
+                    if (password_verify($password, $pass)){
+                        session_start();
+                        $_SESSION['userid'] = $uname;
+                        if($row['Role'] =='Admin')
+                        {
+                             header("Location:https://axt1312.uta.cloud/SpShare/AdminHome.php");
+                        }
+                        else{
+                             header("Location:https://axt1312.uta.cloud/SpShare/UserHome.php");
+                        }
+                    }
+                    else{
+                       echo '<script>alert("Invalid Credentials")</script>';
+                    }
+                }
+            } 
+        }
+        else{
+             echo '<script>alert("Invalid Credentials")</script>';
+        }
+        
+	}
+
+?>
+
 <html>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -89,28 +132,40 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form>
+               <form name = "myform" action=" " method="post" onsubmit="return validateForm()">
                   <div class="form-group">
                      <label>User Name</label>
-                     <input type="text" class="form-control" placeholder="User Name">
+                     <input type="text" class="form-control" name="uname" placeholder="User Name">
                   </div>
                   <div class="form-group">
                      <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password">
+                     <input type="password" name="pwd" class="form-control" placeholder="Password">
                   </div>
                   <button type="submit" class="btn btn-black" >Login</button>
-                  <button id="register" class="btn btn-secondary"  >Register</button>
+                  <a id="register" class="btn btn-secondary" href="Signup.php" >Register</a>
                </form>
             </div>
          </div>
       </div>
 			<script type="text/javascript">
-			 document.getElementById("register").onclick = function () {
+			function validateForm(){
+			    var x = document.forms["myform"]["uname"].value;
+			    var y = document.forms["myform"]["pwd"].value;
+                  if (x == "") {
+                    alert("Please enter a UserName");
+                    return false;
+                  }
+                  if (y == "") {
+                    alert("Please enter a Password");
+                    return false;
+                  }
+			}
+			 //document.getElementById("register").onclick = function () {
 
-			     window.location.href = "/Signup.php";
-						//window.open("Signup.php");
-							alert("hello")
-			    };
+			 //    window.location.href = "Signup.php";
+				// 		//window.open("Signup.php");
+				// 	//	alert("hello")
+			 //   };
 			</script>
 </body>
 
