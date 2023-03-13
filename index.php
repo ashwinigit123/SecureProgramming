@@ -5,7 +5,7 @@
 	if ($_POST) {
         $uname = $_POST['uname'];
         $password = $_POST['pwd'];
-        
+
         $query2 = "select * from Users WHERE Uname='".$uname."'";
         $result = mysqli_query($conn, $query2) or die('error getting data');
         if($result->num_rows >0)
@@ -31,12 +31,12 @@
                        echo '<script>alert("Invalid Credentials")</script>';
                     }
                 }
-            } 
+            }
         }
         else{
              echo '<script>alert("Invalid Credentials")</script>';
         }
-        
+
 	}
 
 ?>
@@ -127,6 +127,7 @@
          <div class="login-main-text">
             <h2>Application<br> Login Page</h2>
             <p>Login or register from here to access.</p>
+            <p>This is a change</p>
          </div>
       </div>
       <div class="main">
